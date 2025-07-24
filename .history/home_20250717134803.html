@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carpentry Website</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0a0a;
+      color: #eee;
+      line-height: 1.6;
+    }
+    a {
+      color: #ff1d4a;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    h1, h2, h3, h4 {
+      font-weight: 900;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('images/kitchen/kich.jpg') center center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 40px;
+      color: #fff;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      max-width: 600px;
+      margin-bottom: 15px;
+    }
+    .hero a.cta {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1rem;
+      background-color: transparent;
+      border: none;
+      color: #ff1d4a;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .hero a.cta svg {
+      margin-left: 8px;
+      fill: #ff1d4a;
+      width: 16px;
+      height: 16px;
+    }
+    /* Gallery Section */
+    .section-title {
+      text-align: center;
+      margin: 60px 0 30px;
+      font-size: 2rem;
+      font-weight: 900;
+      color: #eee;
+      position: relative;
+    }
+    .section-title::before {
+      content: attr(data-subtitle);
+      display: block;
+      font-size: 0.8rem;
+      color: #ff1d4a;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin-bottom: 60px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      height: 180px;
+      box-shadow: 0 0 10px rgba(255, 29, 74, 0.5);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    /* Why Us Section */
+    .why-us {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      align-items: center;
+      color: #eee;
+    }
+    .why-us .text {
+      flex: 1 1 400px;
+    }
+    .why-us .text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .why-us .text p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    .why-us .text button {
+      background-color: #ff1d4a;
+      border: none;
+      padding: 12px 25px;
+      color: white;

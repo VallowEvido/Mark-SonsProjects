@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carpentry Website</title>
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0a0a0a;
+      color: #eee;
+      line-height: 1.6;
+    }
+    a {
+      color: #ff1d4a;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+    h1, h2, h3, h4 {
+      font-weight: 900;
+    }
+    /* Hero Section */
+    .hero {
+      background: url('images/kitchen/kich.jpg') center center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 40px;
+      color: #fff;
+      position: relative;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      max-width: 600px;
+      margin-bottom: 15px;
+    }
+    .hero a.cta {
+      display: inline-flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1rem;
+      background-color: transparent;
+      border: none;
+      color: #ff1d4a;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .hero a.cta svg {
+      margin-left: 8px;
+      fill: #ff1d4a;
+      width: 16px;
+      height: 16px;
+    }
+    /* Gallery Section */
+    .section-title {
+      text-align: center;
+      margin: 60px 0 30px;
+      font-size: 2rem;
+      font-weight: 900;
+      color: #eee;
+      position: relative;
+    }
+    .section-title::before {
+      content: attr(data-subtitle);
+      display: block;
+      font-size: 0.8rem;
+      color: #ff1d4a;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 15px;
+      margin-bottom: 60px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      height: 180px;
+      box-shadow: 0 0 10px rgba(255, 29, 74, 0.5);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    /* Why Us Section */
+    .why-us {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      align-items: center;
+      color: #eee;
+    }
+    .why-us .text {
+      flex: 1 1 400px;
+    }
+    .why-us .text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    .why-us .text p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    .why-us .text button {
+      background-color: #ff1d4a;
+      border: none;
+      padding: 12px 25px;
+      color: white;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .why-us .text button:hover {
+      background-color: #e0143d;
+    }
+    .why-us .images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      flex: 1 1 400px;
+    }
+    .why-us .images img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 29, 74, 0.5);
+      object-fit: cover;
+      height: 180px;
+    }
+    /* Contact Section */
+    .contact {
+      background-color: #111;
+      padding: 50px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      color: #eee;
+      margin-bottom: 60px;
+    }
+    .contact .info {
+      background-color: #ff1d4a;
+      flex: 1 1 300px;
+      padding: 30px;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+    }
+    .contact .info div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .contact .info div svg {
+      margin-right: 15px;
+      fill: white;
+      width: 24px;
+      height: 24px;
+    }
+    .contact .info div span {
+      font-size: 0.9rem;
+      line-height: 1.3;
+    }
+    .contact form {
+      flex: 2 1 500px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    .contact form input,
+    .contact form textarea {
+      background-color: #222;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 15px;
+      color: #eee;
+      font-size: 1rem;
+      resize: none;
+    }
+    .contact form textarea {
+      grid-column: span 2;
+      height: 100px;
+    }
+    .contact form button {
+      grid-column: 2 / 3;
+      justify-self: end;
+      background-color: #ff1d4a;
+      border: none;
+      padding: 12px 25px;
+      color: white;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .contact form button:hover {
+      background-color: #e0143d;
+    }
+    /* Footer */
+    footer {
+      background-color: #111;
+      color: #eee;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+      font-size: 0.9rem;
+    }
+    footer .footer-about {
+      flex: 1 1 250px;
+      max-width: 300px;
+    }
+    footer .footer-about p {
+      margin-bottom: 20px;
+      color: #ccc;
+    }
+    footer .footer-socials a {
+      display: inline-block;
+      background-color: #222;
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      border-radius: 50%;
+      margin-right: 10px;
+      color: #eee;
+      transition: background-color 0.3s ease;
+    }
+    footer .footer-socials a:hover {
+      background-color: #ff1d4a;
+      color: white;
+    }
+    footer .footer-links {
+      flex: 1 1 150px;
+    }
+    footer .footer-links h4 {
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+    footer .footer-links ul {
+      list-style: none;
+    }
+    footer .footer-links ul li {
+      margin-bottom: 10px;
+    }
+    footer .footer-links ul li a {
+      color: #ccc;
+    }
+    footer .footer-links ul li a:hover {
+      color: #ff1d4a;
+    }
+    footer .footer-newsletter {
+      flex: 1 1 250px;
+      max-width: 300px;
+    }
+    footer .footer-newsletter input[type="email"] {
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 6px 0 0 6px;
+      border: none;
+      font-size: 1rem;
+      outline: none;
+      color: #222;
+    }
+    footer .footer-newsletter button {
+      background-color: #ff1d4a;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 0 6px 6px 0;
+      cursor: pointer;
+      color: white;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
+    }
+    footer .footer-newsletter button:hover {
+      background-color: #e0143d;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .why-us {
+        flex-direction: column;
+      }
+      .why-us .images {
+        grid-template-columns: 1fr;
+      }
+      .contact {
+        flex-direction: column;
+      }
+      .contact form {
+        grid-template-columns: 1fr;
+      }
+      .contact form button {
+        grid-column: 1 / 2;
+        justify-self: stretch;
+      }
+      footer {
+        flex-direction: column;
+        align-items: center;
+      }
+      footer .footer-about,
+      footer .footer-links,
+      footer .footer-newsletter {
+        max-width: 100%;
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>We Create Spaces<br />For Better Living.</h1>
+    <a href="#gallery" class="cta" aria-label="View Our Projects">
+      View Our Projects
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M10 17l5-5-5-5v10z"></path>
+      </svg>
+    </a>
+  </section>
+
+  <div class="container">
+    <!-- Gallery Section -->
+    <h2 class="section-title" data-subtitle="OUR GALLERY">Latest Projects</h2>
+    <div id="gallery" class="gallery">
+      <img src="images/kitchen/IMG-20241116-WA0012.jpg" alt="Project 1" />
+      <img src="images/kitchen/IMG-20241116-WA0014.jpg" alt="Project 2" />
+      <img src="images/kitchen/IMG-20241116-WA0015.jpg" alt="Project 3" />
+      <img src="images/kitchen/IMG-20241116-WA0016.jpg" alt="Project 4" />
+      <img src="images/kitchen/IMG-20250703-WA0016.jpg" alt="Project 5" />
+      <img src="images/tvstand/IMG-20241231-WA0016.jpg" alt="Project 6" />
+      <img src="images/tvstand/IMG-20250702-WA0001.jpg" alt="Project 7" />
+      <img src="images/tvstand/IMG-20250712-WA0015.jpg" alt="Project 8" />
+      <img src="images/wardrobe/IMG-20250706-WA0008.jpg" alt="Project 9" />
+    </div>
+
+    <!-- Why Us Section -->
+    <section class="why-us">
+      <div class="text">
+        <h2>We Offer You Professional Interior Design</h2>
+        <p>
+          Lorem ipsum viverra feugiat. Pellen tesque libero ut justo, ultrices in ligula. Semper at tempufddfel.Lorem ipsum dolor sit, amet consectetur elit. Earum mollitia cum ex ipsam autem!earum sequi amet.
+        </p>
+        <button type="button">Read More</button>
+      </div>
+      <div class="images">
+        <img src="images/wardrobe/ward.jpg" alt="Interior Design 1" />

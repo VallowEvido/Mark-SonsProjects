@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Projects - Carpentry</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Lightbox styles */
+    #lightboxOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+    }
+    #lightboxOverlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #d2691e;
+    }
+    #lightboxOverlay .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: #fff;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Mark&Sons Projects</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="projects-hero">
+    <div class="projects-hero-content">
+      <h1>Our Projects</h1>
+      <p><a href="home.html">Home</a> &raquo; <strong>Projects</strong></p>
+    </div>
+  </section>
+
+  <section class="projects-main">
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-image-container" style="position: relative;">
+          <img src="images/wardrobe/ward.jpg" alt="Wardrobe" class="lightbox-trigger" />
+          <div class="project-image-text" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; font-weight: 700;">Wardrobe</div>
+        </div>
+        <div class="project-info">
+          <h3>Wardrobe</h3>
+          <p>Elegant and spacious wardrobe design.</p>
+          <a href="#" class="project-link"><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image-container" style="position: relative;">
+          <img src="images/kitchen/IMG-20241116-WA0012.jpg" alt="Kitchen" class="lightbox-trigger" />
+          <div class="project-image-text" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; font-weight: 700;">Kitchen</div>
+        </div>
+        <div class="project-info">
+          <h3>Kitchen</h3>
+          <p>Contemporary kitchen fitting with sleek design.</p>
+          <a href="#" class="project-link"><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image-container" style="position: relative;">
+          <img src="images/tvstand/IMG-20240621-WA0041.jpg" alt="Tvstand" class="lightbox-trigger" />
+          <div class="project-image-text" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; font-weight: 700;">Tvstand</div>
+        </div>
+        <div class="project-info">
+          <h3>Tvstand</h3>
+          <p>Warm and inviting living room setup.</p>
+          <a href="#" class="project-link"><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image-container" style="position: relative;">
+          <img src="images/closets/closet.jpg" alt="Closets" class="lightbox-trigger" />
+          <div class="project-image-text" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; font-weight: 700;">Closets</div>
+        </div>
+        <div class="project-info">
+          <h3>Closets</h3>
+          <p>Tailored closet solutions for your space.</p>
+          <a href="#" class="project-link"><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image-container" style="position: relative;">
+          <img src="images/wardrobe/wed2.jpg" alt="Wardrobe" class="lightbox-trigger" />
+          <div class="project-image-text" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; font-weight: 700;">Wardrobe</div>
+        </div>
+        <div class="project-info">
+          <h3>Wardrobe</h3>
+          <p>Functional and stylish office design.</p>
+          <a href="#" class="project-link"><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image-container" style="position: relative;">
+          <img src="images/kitchen/IMG-20241116-WA0015.jpg" alt="Kitchen" class="lightbox-trigger" />
+          <div class="project-image-text" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; font-weight: 700;">Kitchen</div>
+        </div>
+        <div class="project-info">
+          <h3>Kitchen</h3>
+          <p>Elegant dining space for family gatherings.</p>
+          <a href="#" class="project-link"><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image-container" style="position: relative;">
+          <img src="images/wardrobe/IMG-20250706-WA0008.jpg" alt="Wardrobe" class="lightbox-trigger" />
+          <div class="project-image-text" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; font-weight: 700;">Wardrobe</div>
+        </div>
+        <div class="project-info">
+          <h3>Wardrobe</h3>
+          <p>Modern wardrobe design and installation.</p>
+          <a href="#" class="project-link"><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image-container" style="position: relative;">
+          <img src="images/tvstand/IMG-20250712-WA0015.jpg" alt="Tvstand" class="lightbox-trigger" />
+          <div class="project-image-text" style="position: absolute; bottom: 10px; left: 10px; color: white; background-color: rgba(0,0,0,0.5); padding: 5px 10px; border-radius: 5px; font-weight: 700;">Tvstand</div>
+        </div>
+        <div class="project-info">
+          <h3>Tvstand</h3>
+          <p>Custom TV stand with storage solutions.</p>
+          <a href="#" class="project-link"><i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div id="lightboxOverlay">
+      <span class="close-btn" id="lightboxClose">&times;</span>
+      <img id="lightboxImage" src="" alt="Expanded project image" />
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <h3>Mark&Sons Projects</h3>
+        <p>We are committed to delivering the best carpentry and interior design services to transform your home into a masterpiece.</p>
+        <p class="rights">© 2025 Vallow. All rights reserved.</p>
+      </div>
+      <div class="footer-center">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <div class="social-icons">
+          <a href="https://www.youtube.com/channel/UC0Jy5UPg4950wgbBKARIvhw" aria-label="YouTube" class="youtube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Facebook" class="facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="TikTok" class="tiktok"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="Instagram" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/27718164859" aria-label="WhatsApp" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="contact-details">
+          <p>Email: <a href="mailto:Markandsonsprojects123@gmail.com">Markandsonsprojects123@gmail.com</a></p>
+          <p>Phone: <a href="tel:+27718164859">+27718164859</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      const lightboxOverlay = document.getElementById('lightboxOverlay');
+      const lightboxImage = document.getElementById('lightboxImage');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const triggers = document.querySelectorAll('.lightbox-trigger');
+
+      triggers.forEach(trigger => {
+        trigger.addEventListener('click', function() {
+          lightboxImage.src = this.src;
+          lightboxOverlay.style.display = 'flex';
+        });
+      });
+
