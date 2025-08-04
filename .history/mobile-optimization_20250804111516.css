@@ -1,0 +1,9 @@
+/* Mobile Optimization for Mark&Sons Projects */
+/* Comprehensive mobile-first responsive design */
+
+/* Reset and base mobile styles */
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+

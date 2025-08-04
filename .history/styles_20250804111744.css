@@ -7,16 +7,6 @@
 }
 
 body {
-  background-color: #1e1e1e; /* Dark background */
-  color: #f5f1e9; /* Light beige text */
-  line-height: 1.6;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Import mobile optimization styles */
-@import url('mobile-optimization.css');
 
 /* Navigation Bar */
 nav {

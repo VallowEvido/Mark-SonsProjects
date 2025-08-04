@@ -16,7 +16,6 @@ body {
 }
 
 /* Import mobile optimization styles */
-@import url('mobile-optimization.css');
 
 /* Navigation Bar */
 nav {

@@ -1,0 +1,59 @@
+/* Mobile Optimization for Mark&Sons Projects */
+/* Comprehensive mobile-first responsive design */
+
+/* Reset and base mobile styles */
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Viewport meta tag should be added to HTML head */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> */
+
+/* Mobile Navigation */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+        position: relative;
+    }
+
+    nav .logo {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.75rem;
+        border-bottom: 1px solid #444;
+    }
+
+    /* Mobile menu toggle */
+    .mobile-menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
