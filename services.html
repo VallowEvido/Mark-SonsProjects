@@ -108,15 +108,26 @@
 </head>
 <body>
   <nav>
-    <div class="logo">Mark&Sons Projects</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+      <div class="nav-inner">
+        <div class="logo">Mark&Sons Projects</div>
+
+        <button
+          class="mobile-menu-toggle"
+          aria-expanded="false"
+          aria-label="Open main menu"
+        >
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html" class="active">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
 
   <section class="services-hero">
     <div class="services-hero-content">
@@ -183,5 +194,41 @@
       </div>
     </div>
   </footer>
+  <script>
+    /* Mobile menu toggle (add before closing </body>) */
+    (() => {
+      const btn = document.querySelector(".mobile-menu-toggle");
+      const nav = document.querySelector("nav");
+
+      if (!btn || !nav) return;
+
+      btn.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        nav.classList.toggle("nav-open");
+        document.body.classList.toggle("menu-open");
+      });
+
+      // Close mobile menu on resize to desktop
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900 && nav.classList.contains("nav-open")) {
+          nav.classList.remove("nav-open");
+          btn.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("menu-open");
+        }
+      });
+
+      // Close menu if user taps outside of it
+      window.addEventListener("click", (e) => {
+        if (!nav.classList.contains("nav-open")) return;
+        const withinNav = nav.contains(e.target);
+        if (!withinNav) {
+          nav.classList.remove("nav-open");
+          btn.setAttribute("aria-expanded", "false");
+          document.body.classList.remove("menu-open");
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

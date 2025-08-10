@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
 }
 
 /* Import mobile optimization styles */
-@import url('mobile-optimization.css');
+@import url("mobile-optimization.css");
 
 /* Navigation Bar */
 nav {
@@ -57,7 +57,8 @@ nav ul li a.active {
 
 /* Hero Section */
 .hero {
-  background: url('images/tvstand/IMG-20250712-WA0015.jpg') no-repeat center center/cover;
+  background: url("images/tvstand/IMG-20250712-WA0015.jpg") no-repeat center
+    center/cover;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -71,7 +72,10 @@ nav ul li a.active {
 .hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(44, 42, 41, 0.7); /* Overlay for readability */
   z-index: 1;
 }
@@ -128,7 +132,7 @@ nav ul li a.active {
   border-radius: 10px;
   width: 280px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
 
@@ -180,7 +184,7 @@ nav ul li a.active {
 
 /* Services Page Specific Styles */
 .services-hero {
-  background: url('images/kitchen/kich.jpg') no-repeat center center/cover;
+  background: url("images/kitchen/kich.jpg") no-repeat center center/cover;
   height: 40vh;
   display: flex;
   flex-direction: column;
@@ -193,7 +197,10 @@ nav ul li a.active {
 .services-hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(44, 42, 41, 0.7);
   z-index: 1;
 }
@@ -245,7 +252,7 @@ nav ul li a.active {
   border-radius: 10px;
   width: 280px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
 }
 .service-card:hover {
@@ -384,7 +391,8 @@ nav ul li a.active {
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 .why-us-content .btn-pink:hover {
   background-color: #b35414;
@@ -433,11 +441,13 @@ nav ul li a.active {
     flex-direction: column;
     padding: 2rem 1rem;
   }
-  .why-us-content, .why-us-images {
+  .why-us-content,
+  .why-us-images {
     max-width: 100%;
     flex: 1 1 100%;
   }
-  .large-image, .small-images {
+  .large-image,
+  .small-images {
     flex: 1 1 100%;
   }
   .small-images {
@@ -458,7 +468,7 @@ nav ul li a.active {
 
 /* About Page Styles */
 .about-hero {
-  background: url('images/kitchen/kich.jpg') no-repeat center center/cover;
+  background: url("images/kitchen/kich.jpg") no-repeat center center/cover;
   height: 30vh;
   display: flex;
   align-items: center;
@@ -471,7 +481,10 @@ nav ul li a.active {
 .about-hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(44, 42, 41, 0.8);
   z-index: 1;
 }
@@ -602,7 +615,9 @@ nav ul li a.active {
     flex-direction: column;
     padding: 2rem 1rem;
   }
-  .about-text, .about-image, .about-quote {
+  .about-text,
+  .about-image,
+  .about-quote {
     max-width: 100%;
     flex: 1 1 100%;
   }
@@ -634,7 +649,7 @@ nav ul li a.active {
   border-radius: 10px;
   width: 220px;
   padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
@@ -728,7 +743,7 @@ nav ul li a.active {
   border-radius: 10px;
   width: 220px;
   padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
   cursor: pointer;
   color: #f5f1e9;
@@ -799,7 +814,7 @@ nav ul li a.active {
 
 /* Projects Page Styles */
 .projects-hero {
-  background: url('images/kitchen/kich.jpg') no-repeat center center/cover;
+  background: url("images/kitchen/kich.jpg") no-repeat center center/cover;
   height: 30vh;
   display: flex;
   align-items: center;
@@ -812,7 +827,10 @@ nav ul li a.active {
 .projects-hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(44, 42, 41, 0.8);
   z-index: 1;
 }
@@ -862,7 +880,7 @@ nav ul li a.active {
   border-radius: 10px;
   width: 220px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: transform 0.3s ease;
   color: #f5f1e9;
@@ -927,7 +945,7 @@ nav ul li a.active {
 
 /* Contact Page Styles */
 .contact-hero {
-  background: url('images/kitchen/kich.jpg') no-repeat center center/cover;
+  background: url("images/kitchen/kich.jpg") no-repeat center center/cover;
   height: 30vh;
   display: flex;
   align-items: center;
@@ -940,7 +958,10 @@ nav ul li a.active {
 .contact-hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(44, 42, 41, 0.8);
   z-index: 1;
 }
@@ -1093,7 +1114,9 @@ nav ul li a.active {
   gap: 2rem;
 }
 
-.footer-left, .footer-center, .footer-right {
+.footer-left,
+.footer-center,
+.footer-right {
   flex: 1 1 300px;
 }
 
@@ -1173,7 +1196,14 @@ nav ul li a.active {
 }
 
 .social-icons a.instagram:hover {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
 }
 
 .contact-details p {
@@ -1241,7 +1271,14 @@ nav ul li a.active {
 }
 
 .social-icons a.instagram:hover {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
 }
 
 .contact-details p {
@@ -1352,7 +1389,7 @@ nav ul li a.active {
 
 /* Contact Page Styles */
 .contact-hero {
-  background: url('images/kitchen/kich.jpg') no-repeat center center/cover;
+  background: url("images/kitchen/kich.jpg") no-repeat center center/cover;
   height: 30vh;
   display: flex;
   align-items: center;
@@ -1365,7 +1402,10 @@ nav ul li a.active {
 .contact-hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(44, 42, 41, 0.8);
   z-index: 1;
 }
@@ -1483,7 +1523,7 @@ nav ul li a.active {
 
 /* Contact Page Styles */
 .contact-hero {
-  background: url('images/kitchen/kich.jpg') no-repeat center center/cover;
+  background: url("images/kitchen/kich.jpg") no-repeat center center/cover;
   height: 30vh;
   display: flex;
   align-items: center;
@@ -1496,7 +1536,10 @@ nav ul li a.active {
 .contact-hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(44, 42, 41, 0.8);
   z-index: 1;
 }
@@ -1620,7 +1663,7 @@ nav ul li a.active {
   display: flex;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .contact-info {
@@ -1641,7 +1684,7 @@ nav ul li a.active {
 }
 
 .info-item i {
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   padding: 0.75rem;
   border-radius: 8px;
   font-size: 1.5rem;
@@ -1711,7 +1754,8 @@ nav ul li a.active {
   .contact-main {
     flex-direction: column;
   }
-  .contact-info, .contact-form {
+  .contact-info,
+  .contact-form {
     flex: none;
     width: 100%;
   }
@@ -1722,4 +1766,166 @@ nav ul li a.active {
     width: 100%;
     align-self: stretch;
   }
+}
+
+/* Responsive navbar (place at end of styles.css) */
+nav {
+  width: 100%;
+  background-color: #2c2a29;
+  box-sizing: border-box;
+}
+
+nav .nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+}
+
+/* logo: keep on single line and prevent overflow */
+nav .logo {
+  flex: 0 0 auto;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #d2691e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* main menu (desktop) */
+nav ul.menu {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  align-items: center;
+  margin-left: auto;
+  padding-left: 0;
+  flex: 0 1 auto;
+}
+
+/* prevent long labels from pushing layout */
+nav ul.menu li a {
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* hamburger hidden on desktop */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.4rem;
+  line-height: 1;
+}
+
+/* small screen behaviour */
+@media (max-width: 900px) {
+  nav .nav-inner {
+    padding: 0 0.75rem;
+  }
+
+  /* show hamburger, hide inline menu */
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  nav ul.menu {
+    display: none; /* hidden until toggled */
+    position: absolute;
+    top: 100%;
+    right: 0.5rem;
+    background-color: #2c2a29;
+    width: calc(100% - 1rem);
+    max-width: 360px;
+    padding: 0.75rem 0.5rem;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    z-index: 1001;
+    transform-origin: top right;
+  }
+
+  nav ul.menu li {
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+  }
+
+  nav ul.menu li a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.25rem;
+  }
+
+  /* when nav has nav-open class, show the mobile menu */
+  nav.nav-open ul.menu {
+    display: flex;
+  }
+
+  /* prevent hover transform causing accidental overflow */
+  .service-card:hover,
+  .capability-card:hover {
+    transform: none;
+  }
+
+  /* lock body scroll when menu open */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* safety: ensure no accidental horizontal overflow from layout */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Desktop layout: logo left, links right */
+@media (min-width: 901px) {
+  nav .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* logo at left */
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  /* Logo stays left and won't grow */
+  nav .logo {
+    flex: 0 0 auto;
+    margin-right: 2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Menu sits to the right */
+  nav ul.menu {
+    display: flex !important; /* ensure visible on desktop */
+    gap: 2rem;
+    margin-left: auto; /* pushes menu to the far right */
+    align-items: center;
+  }
+
+  /* Desktop hides the mobile toggle */
+  .mobile-menu-toggle {
+    display: none !important;
+  }
+}
+
+/* Safety - ensure nav-inner doesn't get centered by other rules */
+nav {
+  width: 100%;
+  box-sizing: border-box;
 }
