@@ -10,223 +10,197 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
-
   <body>
-    <nav>
-      <div class="nav-inner">
-        <div class="logo">Mark&Sons Projects</div>
-
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">Mark&Sons Projects</a>
         <button
-          class="mobile-menu-toggle"
+          class="nav-toggle"
+          type="button"
           aria-expanded="false"
-          aria-label="Open main menu"
+          aria-controls="primary-navigation"
+          data-nav-toggle
         >
+          <span class="sr-only">Toggle navigation</span>
           <i class="fas fa-bars" aria-hidden="true"></i>
         </button>
+        <nav class="site-nav" id="primary-navigation" data-nav-menu>
+          <ul class="site-nav__list" role="list">
+            <li><a href="index.html" aria-current="page" class="site-nav__link">Home</a></li>
+            <li><a href="about.html" class="site-nav__link">About</a></li>
+            <li><a href="services.html" class="site-nav__link">Services</a></li>
+            <li><a href="projects.html" class="site-nav__link">Projects</a></li>
+            <li><a href="contact.html" class="site-nav__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <ul class="menu">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <main>
+      <section class="hero hero--home">
+        <div class="container hero__content">
+          <p class="hero__eyebrow">Bespoke carpentry &amp; interiors</p>
+          <h1 class="hero__title">Good design for stylish living. Make your home modern.</h1>
+          <p class="hero__lead">
+            We pair craftsmanship with contemporary design to create spaces and furniture that feel personal, purposeful, and built to last.
+          </p>
+          <div class="hero__actions">
+            <a href="#services" class="button button--solid">Explore services</a>
+            <a href="projects.html" class="button button--ghost">View recent work</a>
+          </div>
+        </div>
+      </section>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Good Design for Stylish Living.<br />Make your home Modern.</h1>
-        <p>
-          We provide quality carpentry and interior design services to make your
-          home beautiful and functional.
-        </p>
-        <a href="#services" class="btn">Our Services</a>
-      </div>
-    </section>
+      <section id="services" class="section section--surface">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-eyebrow">Our services</p>
+            <h2 class="section-title">Craftsmanship tailored to modern living</h2>
+            <p class="section-lead">
+              From concept sketches to final installation, we collaborate with homeowners and developers to deliver refined carpentry solutions for every room.
+            </p>
+          </header>
+          <div class="card-grid">
+            <article class="card">
+              <span class="card__icon" aria-hidden="true"><i class="fas fa-pencil-ruler"></i></span>
+              <h3 class="card__title">Custom furniture</h3>
+              <p class="card__text">
+                Signature statement pieces designed around your lifestyle, proportioned perfectly to the room, and finished with premium materials.
+              </p>
+            </article>
+            <article class="card">
+              <span class="card__icon" aria-hidden="true"><i class="fas fa-ruler-combined"></i></span>
+              <h3 class="card__title">Full renovations</h3>
+              <p class="card__text">
+                Comprehensive joinery and fit-out support for kitchens, wardrobes, and living spaces with meticulous site coordination.
+              </p>
+            </article>
+            <article class="card">
+              <span class="card__icon" aria-hidden="true"><i class="fas fa-door-open"></i></span>
+              <h3 class="card__title">Cabinetry systems</h3>
+              <p class="card__text">
+                Built-in storage, feature walls, and media units that balance clean lines with clever organisation and integrated lighting.
+              </p>
+            </article>
+            <article class="card">
+              <span class="card__icon" aria-hidden="true"><i class="fas fa-hammer"></i></span>
+              <h3 class="card__title">Restorations &amp; repairs</h3>
+              <p class="card__text">
+                Precision refurbishment of heritage joinery, solid timber elements, and bespoke finishes to extend the life of your investment.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section id="services" class="services">
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-pencil-alt"></i></div>
-        <h3>Custom furniture</h3>
-        <p>Handcrafted furniture tailored to your style and needs.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
-        <h3>Home Renovations</h3>
-        <p>Expert carpentry for remodeling and home improvement projects.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><i class="fas fa-bed"></i></div>
-        <h3>Wood Repairs</h3>
-        <p>Restoring and repairing wooden structures with precision.</p>
-      </div>
-    </section>
+      <section class="section section--muted">
+        <div class="container split-layout">
+          <div>
+            <p class="section-eyebrow">Why choose us</p>
+            <h2 class="section-title">We translate your vision into timeless interiors</h2>
+            <p class="section-lead">
+              Every commission starts with listening. We map the flow of your space, curate material palettes, and engineer details that elevate daily routines.
+            </p>
+            <div class="split-layout__actions">
+              <a href="about.html" class="button button--outline">Discover our approach</a>
+            </div>
+          </div>
+          <div class="media-stack">
+            <figure class="media-stack__item">
+              <img src="images/kitchen/IMG-20241116-WA0012.jpg" alt="Refined kitchen cabinetry installation" loading="lazy" />
+            </figure>
+            <div class="media-stack__secondary">
+              <figure class="media-stack__item">
+                <img src="images/tvstand/IMG-20250702-WA0001.jpg" alt="Floating media wall with integrated storage" loading="lazy" />
+              </figure>
+              <figure class="media-stack__item">
+                <img src="images/wardrobe/wed2.jpg" alt="Custom wardrobe with illuminated shelving" loading="lazy" />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section class="why-us">
-      <div class="why-us-content">
-        <h5>WHY US</h5>
-        <h2>We Offer You Professional Designs</h2>
-        <p>
-          Whether it's a home renovation, custom furniture, or structural
-          framing, we approach every job with the same commitment to detail and
-          customer satisfaction. Your vision is our blueprint — and we build
-          with care, every step of the way.
-        </p>
-        <a href="#" class="btn btn-pink">Read More</a>
-      </div>
-      <div class="why-us-images">
-        <div class="large-image">
-          <img
-            src="images/kitchen/IMG-20241116-WA0012.jpg"
-            alt="Interior Design 1"
-          />
+      <section class="section section--accent">
+        <div class="container">
+          <header class="section-header">
+            <p class="section-eyebrow">Our capabilities</p>
+            <h2 class="section-title">Detail-driven execution from brief to final handover</h2>
+            <p class="section-lead">
+              Consider us your partner in bringing ambitious design ideas to life with disciplined planning and a workshop-grade finish.</p>
+          </header>
+          <div class="card-grid">
+            <article class="card">
+              <img class="card__image" src="images/tvstand/Daudi.jpg" alt="Planning sketches for a living room installation" loading="lazy" />
+              <h3 class="card__title">Planning &amp; prototyping</h3>
+              <p class="card__text">Scaled drawings, detailed pricing, and material sampling that keep every milestone transparent.</p>
+            </article>
+            <article class="card">
+              <img class="card__image" src="images/kitchen/IMG-20241116-WA0014.jpg" alt="Modern kitchen cabinetry" loading="lazy" />
+              <h3 class="card__title">Design development</h3>
+              <p class="card__text">Design coordination with architects and stylists to lock in finishes, spatial flow, and integrated hardware.</p>
+            </article>
+            <article class="card">
+              <img class="card__image" src="images/kitchen/IMG-20241116-WA0015.jpg" alt="Statement interior with timber panelling" loading="lazy" />
+              <h3 class="card__title">Precision fabrication</h3>
+              <p class="card__text">Workshop-built components, quality-controlled before site delivery for seamless installation.</p>
+            </article>
+            <article class="card">
+              <img class="card__image" src="images/wardrobe/IMG-20250706-WA0016.jpg" alt="Custom wardrobe with matte finishes" loading="lazy" />
+              <h3 class="card__title">Aftercare &amp; support</h3>
+              <p class="card__text">Post-install inspections, maintenance guidance, and responsive touch-ups for long-term peace of mind.</p>
+            </article>
+          </div>
         </div>
-        <div class="small-images">
-          <img
-            src="images/tvstand/IMG-20250702-WA0001.jpg"
-            alt="Interior Design 2"
-          />
-          <img src="images/wardrobe/wed2.jpg" alt="Interior Design 3" />
-        </div>
-      </div>
-    </section>
-
-    <section class="capabilities">
-      <div class="capabilities-header">
-        <h5>OUR CAPABILITIES</h5>
-        <h2>What We Do</h2>
-      </div>
-      <div class="capabilities-cards">
-        <div class="capability-card">
-          <img src="images/tvstand/Daudi.jpg" alt="Perfect Planning" />
-          <h3>Perfect Planning.</h3>
-        </div>
-        <div class="capability-card">
-          <img
-            src="images/kitchen/IMG-20241116-WA0014.jpg"
-            alt="Perfect Design"
-          />
-          <h3>Perfect Design.</h3>
-        </div>
-        <div class="capability-card">
-          <img
-            src="images/kitchen/IMG-20241116-WA0015.jpg"
-            alt="Best Interior"
-          />
-          <h3>Best Interior.</h3>
-        </div>
-        <div class="capability-card">
-          <img
-            src="images\wardrobe\IMG-20250706-WA0016.jpg"
-            alt="Furniture Design"
-          />
-          <h3>Furniture Design.</h3>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-left">
-          <h3>Mark&Sons Projects</h3>
-          <p>
-            We are committed to delivering the best carpentry and interior
-            design services to transform your home into a masterpiece.
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-brand">Mark&Sons Projects</p>
+          <p class="footer-text">
+            We deliver finely crafted carpentry and interior finishes that elevate homes across Tzaneen and beyond.
           </p>
-          <p class="rights">© 2025 Vallow. All rights reserved.</p>
+          <p class="footer-meta">© 2025 Vallow. All rights reserved.</p>
         </div>
-        <div class="footer-center">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-          </ul>
+        <div>
+          <h4 class="footer-heading">Quick links</h4>
+          <nav class="footer-links" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+          </nav>
         </div>
-        <div class="footer-right">
-          <div class="social-icons">
-            <a
-              href="https://wa.me/27718164859"
-              target="_blank"
-              aria-label="WhatsApp"
-              class="whatsapp"
-              ><i class="fab fa-whatsapp"></i
-            ></a>
-            <a
-              href="https://www.youtube.com/channel/UC0Jy5UPg4950wgbBKARIvhw"
-              target="_blank"
-              aria-label="YouTube"
-              class="youtube"
-              ><i class="fab fa-youtube"></i
-            ></a>
-            <a
-              href="https://www.facebook.com/profile.php?id=100084561974287&mibextid=ZbWKwL"
-              aria-label="Facebook"
-              class="facebook"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
-              href="https://www.tiktok.com/@markandsonsprojects0?_t=ZM-8yCgqudHXz6&_r=1"
-              aria-label="TikTok"
-              class="tiktok"
-              ><i class="fab fa-tiktok"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/markandsons_project?igsh=MTQ0OW8zc29tbWN3eA=="
-              aria-label="Instagram"
-              class="instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
+        <div>
+          <h4 class="footer-heading">Connect</h4>
+          <div class="social-list" aria-label="Social media">
+            <a href="https://wa.me/27718164859" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC0Jy5UPg4950wgbBKARIvhw" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100084561974287&mibextid=ZbWKwL" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@markandsonsprojects0?_t=ZM-8yCgqudHXz6&_r=1" aria-label="TikTok">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/markandsons_project?igsh=MTQ0OW8zc29tbWN3eA==" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
           </div>
-          <div class="contact-details">
-            <p>
-              Email:
-              <a href="mailto:Markandsonsprojects123@gmail.com"
-                >Markandsonsprojects123@gmail.com</a
-              >
-            </p>
-            <p>Phone: <a href="tel:+27718164859">+27718164859</a></p>
+          <div class="footer-contact">
+            <a href="mailto:Markandsonsprojects123@gmail.com">Markandsonsprojects123@gmail.com</a>
+            <a href="tel:+27718164859">+27 71 816 4859</a>
           </div>
         </div>
       </div>
     </footer>
+
+    <script src="scripts/site.js"></script>
   </body>
-
-  <script>
-    /* Mobile menu toggle (add before closing </body>) */
-    (() => {
-      const btn = document.querySelector(".mobile-menu-toggle");
-      const nav = document.querySelector("nav");
-
-      if (!btn || !nav) return;
-
-      btn.addEventListener("click", () => {
-        const expanded = btn.getAttribute("aria-expanded") === "true";
-        btn.setAttribute("aria-expanded", String(!expanded));
-        nav.classList.toggle("nav-open");
-        document.body.classList.toggle("menu-open");
-      });
-
-      // Close mobile menu on resize to desktop
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 900 && nav.classList.contains("nav-open")) {
-          nav.classList.remove("nav-open");
-          btn.setAttribute("aria-expanded", "false");
-          document.body.classList.remove("menu-open");
-        }
-      });
-
-      // Close menu if user taps outside of it
-      window.addEventListener("click", (e) => {
-        if (!nav.classList.contains("nav-open")) return;
-        const withinNav = nav.contains(e.target);
-        if (!withinNav) {
-          nav.classList.remove("nav-open");
-          btn.setAttribute("aria-expanded", "false");
-          document.body.classList.remove("menu-open");
-        }
-      });
-    })();
-  </script>
 </html>
