@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
+    /* Enhanced Services Hero Section */
     .services-hero {
-      background: url('images/kitchen/kich.jpg') no-repeat center center/cover;
-      height: 40vh;
+      background: linear-gradient(135deg, rgba(210, 105, 30, 0.15), rgba(44, 42, 41, 0.4)), url('images/kitchen/kich.jpg') no-repeat center center/cover;
+      height: 50vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -17,91 +18,262 @@
       color: #f5f1e9;
       position: relative;
       text-align: center;
+      backdrop-filter: blur(2px);
     }
-    .services-hero::after {
+    .services-hero::before {
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background-color: rgba(44, 42, 41, 0.7);
+      background: linear-gradient(135deg, rgba(30, 30, 30, 0.6), rgba(44, 42, 41, 0.8));
       z-index: 1;
     }
     .services-hero-content {
       position: relative;
       z-index: 2;
+      animation: fadeInUp 1.2s ease-out;
     }
+    .services-hero-content h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #f5f1e9, #d2691e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    .services-hero-content::after {
+      content: "Expert Craftsmanship";
+      display: block;
+      font-size: 1.3rem;
+      color: #ccc6bb;
+      font-weight: 400;
+      margin-top: 0.5rem;
+      opacity: 0.9;
+    }
+
+    /* Enhanced Breadcrumb */
     .breadcrumb {
-      background-color: #f5f5f5;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       color: #333;
-      padding: 0.5rem 1rem;
+      padding: 1rem 2rem;
       font-size: 0.9rem;
       text-align: center;
+      border-bottom: 3px solid #d2691e;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .breadcrumb::before {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #d2691e, transparent);
     }
     .breadcrumb a {
       color: #d2691e;
       text-decoration: none;
       font-weight: 600;
+      transition: all 0.3s ease;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
     }
     .breadcrumb a:hover {
-      text-decoration: underline;
+      background-color: rgba(210, 105, 30, 0.1);
+      transform: translateY(-1px);
     }
     .breadcrumb strong {
       font-weight: 700;
       color: #555;
+      background-color: rgba(210, 105, 30, 0.1);
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
     }
+
+    /* Enhanced Services Main Section */
     .services-main {
-      padding: 4rem 2rem;
-      max-width: 1200px;
+      background: linear-gradient(135deg, #1e1e1e 0%, #2a2a2a 100%);
+      padding: 5rem 2rem;
+      max-width: 1400px;
       margin: 0 auto;
       color: #f5f1e9;
+      position: relative;
+    }
+    .services-main::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #d2691e, transparent);
     }
     .services-main h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+      font-weight: 800;
       color: #d2691e;
       text-align: center;
+      position: relative;
+      display: inline-block;
+      width: 100%;
     }
+    .services-main h2::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(45deg, #d2691e, #ff8c42);
+      border-radius: 2px;
+      box-shadow: 0 2px 10px rgba(210, 105, 30, 0.4);
+    }
+
+    /* Enhanced Service Cards */
     .services-cards {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
     }
     .service-card {
-      background-color: #3a3735;
-      padding: 2rem;
-      border-radius: 10px;
-      width: 280px;
+      background: linear-gradient(135deg, #3a3735 0%, #2c2a29 100%);
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
+      box-shadow: 
+        0 10px 30px rgba(0,0,0,0.3),
+        0 1px 8px rgba(0,0,0,0.2);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(210, 105, 30, 0.1);
+    }
+    .service-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(210, 105, 30, 0.1), transparent);
+      transition: left 0.6s ease;
+    }
+    .service-card:hover::before {
+      left: 100%;
     }
     .service-card:hover {
-      transform: translateY(-10px);
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 
+        0 20px 40px rgba(0,0,0,0.4),
+        0 0 20px rgba(210, 105, 30, 0.3);
+      border-color: rgba(210, 105, 30, 0.4);
     }
     .service-icon {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       color: #d2691e;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(45deg, #d2691e, #ff8c42);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 2px 4px rgba(210, 105, 30, 0.3));
+      transition: all 0.3s ease;
+    }
+    .service-card:hover .service-icon {
+      transform: scale(1.1) rotate(5deg);
+      filter: drop-shadow(0 4px 8px rgba(210, 105, 30, 0.5));
     }
     .service-card h3 {
-      margin-bottom: 1rem;
-      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.4rem;
       font-weight: 700;
+      color: #f5f1e9;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      transition: color 0.3s ease;
+    }
+    .service-card:hover h3 {
+      color: #d2691e;
     }
     .service-card p {
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      margin-bottom: 2rem;
       color: #ccc6bb;
+      line-height: 1.7;
+      transition: color 0.3s ease;
     }
-    @media (max-width: 900px) {
+    .service-card:hover p {
+      color: #e0dbd2;
+    }
+
+    /* Professional animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Enhanced responsive design */
+    @media (max-width: 1200px) {
       .services-cards {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+      .services-main {
+        padding: 4rem 1.5rem;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .services-hero {
+        height: 45vh;
+        padding: 0 1rem;
+      }
+      .services-hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .services-main {
+        padding: 3rem 1rem;
+      }
+      .services-main h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+      }
+      .services-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
       .service-card {
-        width: 90%;
-        max-width: 400px;
+        padding: 2rem 1.5rem;
+        border-radius: 15px;
+      }
+      .service-icon {
+        font-size: 3rem;
+      }
+      .breadcrumb {
+        padding: 0.8rem 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services-hero-content h1 {
+        font-size: 2rem;
+      }
+      .service-card h3 {
+        font-size: 1.2rem;
+      }
+      .service-card p {
+        font-size: 0.95rem;
       }
     }
   </style>
